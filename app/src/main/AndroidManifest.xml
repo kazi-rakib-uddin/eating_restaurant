@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eating.restaurant">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.eating.restaurant.Registration_Activity"></activity>
+        <activity android:name="com.eating.restaurant.Login_Activity" />
+        <activity android:name="com.eating.restaurant.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.eating.restaurant.Order_Details"
+            android:label="@string/title_activity_order__details"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"/>
+        <activity
+            android:name="com.eating.restaurant.Order_History"
+            android:label="@string/title_activity_order__history"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"/>
+        <activity
+            android:name="com.eating.restaurant.New_Order"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false"/>
+        <activity android:name="com.eating.restaurant.MainActivity"
+            android:exported="false">
+
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/Google_API_Key" />
+
+
+        <service
+            android:name="com.eating.restaurant.FirebaseMessag.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+    </application>
+
+
+</manifest>

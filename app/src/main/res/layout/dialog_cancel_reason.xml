@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_10sdp">
+
+
+        <RadioGroup
+            android:id="@+id/rg_cancel_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/order_cancel_by_customar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order canceled by customer"
+                android:buttonTint="@color/colorPrimary"
+                android:fontFamily="@font/fonts_medium"/>
+
+            <RadioButton
+                android:id="@+id/delayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delayed"
+                android:buttonTint="@color/colorPrimary"
+                android:fontFamily="@font/fonts_medium"/>
+
+            <RadioButton
+                android:id="@+id/self_pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Self pickup"
+                android:buttonTint="@color/colorPrimary"
+                android:fontFamily="@font/fonts_medium"/>
+
+            <RadioButton
+                android:id="@+id/others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:buttonTint="@color/colorPrimary"
+                android:fontFamily="@font/fonts_medium"/>
+
+
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_box"
+                android:lines="3"
+                android:hint="Comment"
+                android:gravity="top|left"
+                android:padding="@dimen/_8sdp"
+                android:fontFamily="@font/fonts_medium"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
